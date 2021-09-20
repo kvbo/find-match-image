@@ -1,0 +1,102 @@
+/* css file */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  font-size: 1rem;
+}
+.main {
+  margin-top: 8px;
+  width: 100%;
+  height: fit-content;
+}
+.square {
+  overflow: hidden;
+}
+.square:active {
+  transition: .3s ease;
+  transform: scale(1.09);
+}
+
+.btn { 
+  margin-inline: 1rem;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: white;
+  border: 1px;
+  border-radius: 6px;
+  background-color: #cccaa0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.c{
+  display: flex;
+  justify-content:center;
+  margin: 2rem;
+  /* margin-inline: ; */
+}
+
+.spin{
+  animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }  
+  /* 50% {
+    transform: rotate(180deg);
+  } */
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px){
+  .main {
+    width: 100%;
+  }
+  #board{
+    width: 100%;
+    /* height: auto; */
+  }
+
+  .c {
+    width: 100%;
+    /* margin: auto; */
+    width: 100%;
+    flex-direction: column;
+    align-content: stretch;
+  }
+
+  .c > * {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+ 
+}
+
+.cover {
+  animation: 2s cover 1 linear;
+}
+
+@keyframes cover{
+  0% {
+    width: 0%;
+  }
+
+  90%{
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
